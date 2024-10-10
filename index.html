@@ -22,10 +22,9 @@
 
     <script>
         function openLetter() {
-            console.log("Button clicked, opening letter...");
+            console.log("Envelope clicked, opening letter...");
             var letter = document.getElementById('letter');
-            letter.style.transform = 'translateY(0)'; // Force the letter to slide into view
-            letter.style.transition = 'transform 0.5s ease-in-out';
+            letter.classList.add('open');
         }
     </script>
 </body>
