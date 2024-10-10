@@ -18,7 +18,6 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.4s ease;
 }
 
 .letter {
@@ -26,21 +25,17 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    top: 100%;  /* Initially hidden */
+    top: 0;
     left: 0;
     padding: 20px;
     box-sizing: border-box;
-    transition: top 0.4s ease;  /* Animation effect */
+    transform: translateY(100%); /* Initially off-screen */
     border-radius: 10px 10px 0 0;
 }
 
 .letter h2 {
     margin-top: 0;
     color: #ff69b4;
-}
-
-.letter.open {
-    top: 0;  /* Move to top to make it visible */
 }
 
 button {
