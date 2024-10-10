@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="envelope" onclick="toggleLetter()">
-        <div class="flap"></div> <!-- The top flap of the envelope -->
+        <div class="flap" id="flap"></div> <!-- The top flap of the envelope -->
         <div class="letter" id="letter">
             <h2>Dear [Her Name],</h2>
             <p>This is a little surprise, just for you.</p>
@@ -25,7 +25,9 @@
         function toggleLetter() {
             console.log("Envelope clicked, toggling letter...");
             var letter = document.getElementById('letter');
+            var flap = document.getElementById('flap');
             letter.classList.toggle('open');
+            flap.classList.toggle('open');
         }
     </script>
 </body>
