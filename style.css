@@ -20,6 +20,20 @@ body {
     cursor: pointer;
 }
 
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ff9c9c;
+    border-radius: 0 0 10px 10px;
+    transform-origin: top;
+    transform: rotateX(0);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+}
+
 .letter {
     position: absolute;
     width: 100%;
@@ -31,6 +45,7 @@ body {
     box-sizing: border-box;
     border-radius: 10px 10px 0 0;
     transition: top 0.5s ease-in-out; /* Slide-up animation */
+    z-index: 0;
 }
 
 .letter h2 {
@@ -40,6 +55,14 @@ body {
 
 .letter.open {
     top: 0;  /* Slides the letter into view */
+}
+
+.letter:not(.open) {
+    top: 100%; /* Hide the letter again when not open */
+}
+
+.envelope .flap.open {
+    transform: rotateX(180deg); /* Rotate flap to simulate opening */
 }
 
 footer {
