@@ -61,7 +61,7 @@ body {
     top: 100%; /* Hide the letter again when not open */
 }
 
-.envelope .flap.open {
+.flap.open {
     transform: rotateX(180deg); /* Rotate flap to simulate opening */
 }
 
