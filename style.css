@@ -25,12 +25,12 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    top: 0;
+    top: 100%;  /* Initially hidden below the envelope */
     left: 0;
     padding: 20px;
     box-sizing: border-box;
-    transform: translateY(100%); /* Initially off-screen */
     border-radius: 10px 10px 0 0;
+    transition: top 0.5s ease-in-out; /* Slide-up animation */
 }
 
 .letter h2 {
@@ -38,19 +38,8 @@ body {
     color: #ff69b4;
 }
 
-button {
-    background-color: #ff69b4;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #ff1493;
+.letter.open {
+    top: 0;  /* Slides the letter into view */
 }
 
 footer {
