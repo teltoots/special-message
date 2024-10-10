@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="envelope">
+        <div class="letter" id="letter">
+            <h2>Dear [Her Name],</h2>
+            <p>This is a little surprise, just for you.</p>
+            <p>I’ve been thinking a lot about us and wanted to ask you something special...</p>
+            <p>Will you be my girlfriend?</p>
+            <button onclick="openLetter()">Open the Letter</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ just for you.</p>
+    </footer>
+
+    <script>
+        function openLetter() {
+            document.getElementById('letter').classList.add('open');
+        }
+    </script>
+</body>
+</html>
