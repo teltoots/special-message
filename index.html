@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="envelope">
+    <div class="envelope" onclick="openLetter()">
         <div class="letter" id="letter">
             <h2>Dear [Her Name],</h2>
             <p>This is a little surprise, just for you.</p>
             <p>I’ve been thinking a lot about us and wanted to ask you something special...</p>
             <p>Will you be my girlfriend?</p>
-            <button onclick="openLetter()">Open the Letter</button>
         </div>
     </div>
 
@@ -25,7 +24,8 @@
         function openLetter() {
             console.log("Button clicked, opening letter...");
             var letter = document.getElementById('letter');
-            letter.classList.add('open');
+            letter.style.transform = 'translateY(0)'; // Force the letter to slide into view
+            letter.style.transition = 'transform 0.5s ease-in-out';
         }
     </script>
 </body>
