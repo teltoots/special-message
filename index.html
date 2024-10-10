@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="envelope" onclick="openLetter()">
+    <div class="envelope" onclick="toggleLetter()">
+        <div class="flap"></div> <!-- The top flap of the envelope -->
         <div class="letter" id="letter">
             <h2>Dear [Her Name],</h2>
             <p>This is a little surprise, just for you.</p>
@@ -21,10 +22,10 @@
     </footer>
 
     <script>
-        function openLetter() {
-            console.log("Envelope clicked, opening letter...");
+        function toggleLetter() {
+            console.log("Envelope clicked, toggling letter...");
             var letter = document.getElementById('letter');
-            letter.classList.add('open');
+            letter.classList.toggle('open');
         }
     </script>
 </body>
